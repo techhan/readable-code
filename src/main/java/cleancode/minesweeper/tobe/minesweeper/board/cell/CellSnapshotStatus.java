@@ -11,7 +11,6 @@ public enum CellSnapshotStatus {
     ;
 
 
-
     private final String description;
 
     CellSnapshotStatus(String description) {
