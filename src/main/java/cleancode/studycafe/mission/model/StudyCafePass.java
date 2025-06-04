@@ -30,6 +30,10 @@ public class StudyCafePass {
         return price;
     }
 
+    public int getDiscountPrice() {
+      return (int) discountRate * price;
+    }
+
     public double getDiscountRate() {
         return discountRate;
     }
@@ -38,4 +42,15 @@ public class StudyCafePass {
         return passType.display(duration, price);
     }
 
+    public String discountPricePrint() {
+      int discountPrice = getDiscountPrice();
+      if(discountPrice > 0) {
+        return "이벤트 할인 금액: " + discountPrice + "원";
+      }
+      return null;
+    }
+
+  public int getTotalPrice() {
+    return price - getDiscountPrice();
+  }
 }
